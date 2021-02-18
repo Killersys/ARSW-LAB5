@@ -1,6 +1,7 @@
 
 package edu.eci.arsw.blueprints.model;
 
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -22,6 +23,7 @@ public class Blueprint {
     }
          
     public Blueprint(String author, String name){
+        this.author = author;     
         this.name=name;
         points=new ArrayList<>();
     }
@@ -43,6 +45,10 @@ public class Blueprint {
     
     public void addPoint(Point p){
         this.points.add(p);
+    }
+    
+    public void removeAllPoints(){
+    	points=new ArrayList<>();
     }
 
     @Override
@@ -85,6 +91,18 @@ public class Blueprint {
         
         return true;
     }
+
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+
+	public void setPoints(List<Point> points) {
+		this.points = points;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
     
     
     
